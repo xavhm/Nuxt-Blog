@@ -11,6 +11,8 @@ Personal practice project powered by Vue3, VueX, NuxtJS and Firebase.
 
 ### Practiced Concepts
 
+Routing and dynamic routing. </br>
+
 ## Build Setup
 
 ```bash
