@@ -9,6 +9,8 @@ Personal practice project powered by Vue3, VueX, NuxtJS and Firebase.
 
 ### User Stories
 
+A user can access a list of articles. </br>
+
 ### Practiced Concepts
 
 Routing and dynamic routing. </br>
