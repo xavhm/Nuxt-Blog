@@ -10,7 +10,8 @@ Personal practice project powered by Vue3, VueX, NuxtJS and Firebase.
 ### User Stories
 
 A user can access a list of articles. </br>
-A user registered as admin can add/edit a new blog post. </br>
+A user can access a read a specific article. </br>
+A user registered as admin can add/edit a blog post. </br>
 
 ### Practiced Concepts
 
