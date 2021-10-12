@@ -1,13 +1,14 @@
 <template>
   <div class="posts-page">
-    List of posts.
+    <PostList />
   </div>
 </template>
 
 <script>
-export default {
-
-}
+  import PostList from "@/components/Posts/PostList.vue";
+  export default {
+    components: { PostList }
+  };
 </script>
 
 <style scoped>

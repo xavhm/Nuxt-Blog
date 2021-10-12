@@ -14,6 +14,7 @@ A user can access a list of articles. </br>
 ### Practiced Concepts
 
 Routing and dynamic routing. </br>
+Toggable navigation components. </br>
 
 ## Build Setup
 
