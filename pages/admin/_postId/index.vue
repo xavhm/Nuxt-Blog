@@ -10,6 +10,7 @@
 import AdminPostForm from "@/components/admin/AdminPostForm.vue";
 export default {
   components : { AdminPostForm },
+  layout: 'admin',
   data() {
     return {
       loadedPost: {
