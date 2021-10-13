@@ -19,6 +19,7 @@ A user registered as admin can add/edit a blog post. </br>
 Routing and dynamic routing. </br>
 Toggable navigation components. </br>
 Conditional layouts. </br>
+Testing of Nuxt loading component. </br>
 Practice of AsyncData method. </br>
 User authentification and authorization. </br>
 
