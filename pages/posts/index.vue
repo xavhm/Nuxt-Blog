@@ -8,9 +8,10 @@
 import PostList from "@/components/Posts/PostList.vue";
 export default {
   components: { PostList },
-  asyncData(context, callback) {
-    setTimeout(() => {
-      callback(null, {
+  asyncData(context) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+      resolve({
         loadedPosts: [
           {
             id: "1",
@@ -29,8 +30,14 @@ export default {
         ]
       });
     }, 1000);
-  }
-};
+    })
+    .then(data => {
+      return data
+    })
+    .catch(e => {
+      context.error(new Error())
+    })
+}}
 </script>
 
 <style scoped>

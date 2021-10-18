@@ -11,7 +11,7 @@ Personal practice project powered by Vue3, VueX, NuxtJS and Firebase.
 
 A user can register an account. </br>
 A user can access a list of blog posts. </br>
-A user can access a read a specific post. </br>
+A user can access a specific post. </br>
 A user registered as admin can add/edit a blog post. </br>
 
 ### Practiced Concepts
