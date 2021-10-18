@@ -21,6 +21,8 @@ Toggable navigation components. </br>
 Conditional layouts. </br>
 Testing of Nuxt loading component. </br>
 Practice of AsyncData method. </br>
+Practice with NuxtServerInit. </br>
+Practice of Vuex Store </br>
 User authentification and authorization. </br>
 
 ## Build Setup

@@ -7,37 +7,18 @@
 <script>
 import PostList from "@/components/Posts/PostList.vue";
 export default {
+  data() {
+    return {
+      
+    }
+  },
   components: { PostList },
-  asyncData(context) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-      resolve({
-        loadedPosts: [
-          {
-            id: "1",
-            title: "First Post",
-            previewText: "This is our first post!",
-            thumbnail:
-              "https://images.unsplash.com/photo-1542315192-1f61a1792f33?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvZGluZyUyMHNldHVwfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-          },
-          {
-            id: "2",
-            title: "Second Post",
-            previewText: "This is our second post!",
-            thumbnail:
-              "https://images.unsplash.com/photo-1542315192-1f61a1792f33?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvZGluZyUyMHNldHVwfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-          }
-        ]
-      });
-    }, 1000);
-    })
-    .then(data => {
-      return data
-    })
-    .catch(e => {
-      context.error(new Error())
-    })
-}}
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    }
+  }
+};
 </script>
 
 <style scoped>
