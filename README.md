@@ -12,7 +12,8 @@ Personal practice project powered by Vue3, VueX, NuxtJS and Firebase.
 A user can register an account. </br>
 A user can access a list of blog posts. </br>
 A user can access a specific post. </br>
-A user registered as admin can add/edit a blog post. </br>
+A registered user can add a new blog post. </br>
+A user registered as admin can edit a blog post. </br>
 
 ### Practiced Concepts
 
@@ -22,7 +23,8 @@ Conditional layouts. </br>
 Testing of Nuxt loading component. </br>
 Practice of AsyncData method. </br>
 Practice with NuxtServerInit. </br>
-Practice of Vuex Store </br>
+Practice of Vuex Store. </br>
+Practice with module @nuxtjs/axios. </br>
 User authentification and authorization. </br>
 
 ## Build Setup

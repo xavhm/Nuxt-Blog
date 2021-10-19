@@ -26,6 +26,7 @@ import AppButton from "@/components/ui/AppButton.vue";
 import AppControlInput from "@/components/ui/AppControlInput.vue";
 export default {
   components : { AppButton, AppControlInput },
+  emits: ['submit'],
   props: {
     post: {
       type: Object,
@@ -44,7 +45,7 @@ export default {
   },
   methods: {
     onSave() {
-      console.log(this.editedPost);
+      this.$emit('submit', this.editedPost)
     },
     onCancel() {
       this.$router.push('/admin');

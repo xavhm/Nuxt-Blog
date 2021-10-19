@@ -1,7 +1,7 @@
 <template>
   <div class="admin-new-post-page">
     <section class="new-post-form">
-      <AdminPostForm></AdminPostForm>
+      <AdminPostForm @submit="onSubmitted"></AdminPostForm>
     </section>
   </div>
 </template>
@@ -10,7 +10,14 @@
 import AdminPostForm from "@/components/admin/AdminPostForm.vue";
 export default {
   components : { AdminPostForm },
-  layout: 'admin'
+  layout: 'admin',
+  methods: { 
+    onSubmitted(postData) {
+      this.$axios.$post('https://first-nuxt-blog-default-rtdb.europe-west1.firebasedatabase.app/posts.json', postData)
+        .then(result => console.log(result))
+        .catch(e => console.log(e))
+    }
+  }
 };
 </script>
 
