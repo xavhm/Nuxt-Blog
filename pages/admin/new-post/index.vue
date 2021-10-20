@@ -13,9 +13,10 @@ export default {
   layout: 'admin',
   methods: { 
     onSubmitted(postData) {
-      this.$axios.$post('https://first-nuxt-blog-default-rtdb.europe-west1.firebasedatabase.app/posts.json', { ...postData, updatedDate: new Date() })
-        .then(result => { this.$router.replace('/') })
-        .catch(e => console.log(e))
+      this.$store.dispatch('addPost', postData)
+        .then(() => { 
+          this.$router.push("/admin")
+      });
     }
   }
 };

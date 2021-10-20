@@ -15,16 +15,15 @@ export default {
     return context.$axios.get('https://first-nuxt-blog-default-rtdb.europe-west1.firebasedatabase.app/posts/' + context.params.postId + '.json')
     .then(res => {
       return {
-        loadedPost : res.data
+        loadedPost : { ...res.data, id: context.params.postId }
       }
     })
     .catch(e => context.error(e))
   },
   methods: { 
     onSubmitted(editedPost) {
-      this.$axios.$put('https://first-nuxt-blog-default-rtdb.europe-west1.firebasedatabase.app/posts/' + this.$route.params.postId + '.json', editedPost)
-        .then(res => { this.$router.replace('/') })
-        .catch(e => console.log(e))
+      this.$store.dispatch('editPost', editedPost)
+        .then (() => {  this.$router.push('/admin') })
     }
   }
 };
