@@ -1,7 +1,7 @@
 <template>
   <div class="admin-post-page">
     <section class="update-form"> 
-      <AdminPostForm :post="loadedPost"></AdminPostForm>
+      <AdminPostForm :post="loadedPost" @submit="onSubmitted"></AdminPostForm>
     </section>
   </div>
 </template>
@@ -11,14 +11,20 @@ import AdminPostForm from "@/components/admin/AdminPostForm.vue";
 export default {
   components : { AdminPostForm },
   layout: 'admin',
-  data() {
-    return {
-      loadedPost: {
-        author: 'Xavier',
-        title: 'My first Nuxt App',
-        content: 'My first Nuxt content',
-        thumbnailLink: 'https://images.unsplash.com/photo-1542315192-1f61a1792f33?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvZGluZyUyMHNldHVwfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+  asyncData(context) {
+    return context.$axios.get('https://first-nuxt-blog-default-rtdb.europe-west1.firebasedatabase.app/posts/' + context.params.postId + '.json')
+    .then(res => {
+      return {
+        loadedPost : res.data
       }
+    })
+    .catch(e => context.error(e))
+  },
+  methods: { 
+    onSubmitted(editedPost) {
+      this.$axios.$put('https://first-nuxt-blog-default-rtdb.europe-west1.firebasedatabase.app/posts/' + this.$route.params.postId + '.json', editedPost)
+        .then(res => { this.$router.replace('/') })
+        .catch(e => console.log(e))
     }
   }
 };

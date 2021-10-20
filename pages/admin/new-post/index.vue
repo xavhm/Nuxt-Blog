@@ -14,9 +14,8 @@ export default {
   methods: { 
     onSubmitted(postData) {
       this.$axios.$post('https://first-nuxt-blog-default-rtdb.europe-west1.firebasedatabase.app/posts.json', { ...postData, updatedDate: new Date() })
-        .then(result => console.log(result))
+        .then(result => { this.$router.replace('/') })
         .catch(e => console.log(e))
-      this.$router.replace('/')
     }
   }
 };
