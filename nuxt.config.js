@@ -44,5 +44,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  env: {
+    fbApiKey: process.env.FB_APIKEY
   }
 }
