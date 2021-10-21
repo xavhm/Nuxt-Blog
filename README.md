@@ -24,8 +24,9 @@ Testing of Nuxt loading component. </br>
 Practice of AsyncData method. </br>
 Practice with NuxtServerInit. </br>
 Practice of Vuex Store. </br>
-Practice with module @nuxtjs/axios. </br>
+Practice of Nuxt modules with @nuxtjs/axios. </br>
 User authentification and authorization. </br>
+Practice of Nuxt middlewares. </br>
 
 ## Build Setup
 
