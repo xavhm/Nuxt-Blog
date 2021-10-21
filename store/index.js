@@ -70,8 +70,14 @@ const createStore = () => {
         )
         .then(result => {
           vuexContext.commit('setToken', result.data.idToken);
+          vuexContext.dispatch('setLogoutTimer', result.data.expiresIn * 1000)
         })
         .catch(e => console.log(e.message));
+      },
+      setLogoutTimer(vuexContext, duration) {
+        setTimeout(() => {
+          vuexContext.commit('clearToken')
+        }, duration)
       }
     },
     getters: {
