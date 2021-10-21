@@ -21,7 +21,7 @@ Routing and dynamic routing. </br>
 Toggable navigation components. </br>
 Conditional layouts. </br>
 Testing of Nuxt loading component. </br>
-Practice of AsyncData method. </br>
+Practice of AsyncData and \$fetch methods. </br>
 Practice with NuxtServerInit. </br>
 Practice of Vuex Store. </br>
 Practice of Nuxt modules with @nuxtjs/axios. </br>
