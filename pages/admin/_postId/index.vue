@@ -11,6 +11,7 @@ import AdminPostForm from "@/components/admin/AdminPostForm.vue";
 export default {
   components : { AdminPostForm },
   layout: 'admin',
+  middleware: 'auth',
   asyncData(context) {
     return context.$axios.get('https://first-nuxt-blog-default-rtdb.europe-west1.firebasedatabase.app/posts/' + context.params.postId + '.json')
     .then(res => {

@@ -16,6 +16,7 @@ import AppButton from "@/components/ui/AppButton.vue";
 export default {
   components : { PostList, AppButton },
   layout: 'admin',
+  middleware: 'auth',
   computed: { 
     loadedPosts() {
       return this.$store.getters.loadedPosts

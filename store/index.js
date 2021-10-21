@@ -19,6 +19,9 @@ const createStore = () => {
       },
       setToken(state, token) {
         state.token = token
+      },
+      clearToken(state) {
+        state.token = null;
       }
     },
     actions: {
@@ -66,7 +69,6 @@ const createStore = () => {
           }
         )
         .then(result => {
-          console.log(result);
           vuexContext.commit('setToken', result.data.idToken);
         })
         .catch(e => console.log(e.message));
@@ -75,6 +77,9 @@ const createStore = () => {
     getters: {
       loadedPosts(state) {
         return state.loadedPosts
+      },
+      isAuthenticated(state) {
+        return state.token != null
       }
     },
   })
