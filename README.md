@@ -1,7 +1,5 @@
 # Nuxt-Blog
 
-Live Demo @
-
 ## Project Description
 
 Blogging App. </br>
