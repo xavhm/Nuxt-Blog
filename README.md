@@ -3,7 +3,7 @@
 ## Project Description
 
 Blogging App. </br>
-Personal practice project powered by Vue3, VueX, NuxtJS and Firebase.
+Personal practice project powered by Vue2, VueX, NuxtJS and Firebase.
 
 ### User Stories
 
